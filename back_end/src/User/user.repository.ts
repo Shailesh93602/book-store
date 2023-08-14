@@ -85,7 +85,7 @@ export class UserRepository {
     userDetails: UserModel
   ): Promise<Result<UserModel | null>> => {
     const oldUser = await User.findOne({ id: userDetails.id });
-    if (userDetails.email === "admin@tatvasoft.com" || oldUser.roleId === 1) {
+    if (userDetails.email === "admin@gmail.com" || oldUser.roleId === 1) {
       return new Result({
         code: HttpStatusCode.Forbidden,
         error:
